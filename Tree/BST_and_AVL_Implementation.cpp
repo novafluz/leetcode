@@ -44,31 +44,27 @@ private:
         
     }
 
-    Node* deleteRec(Node* node, int value) {
-        // TODO: Implement recursive delete
-        if (!node) return node;
-        if (value < node->data) {
-            node->left = deleteRec(node->left, value);
-        } else if (value > node->data) {
-            node->right = deleteRec(node->right, value);
-        } else { // found the node to delete
-            if (!node->left) {
-                Node* temp = node->right;
-                delete node;
-                return temp;
-            } else if (!node->right) {
-                Node* temp = node->left;
-                delete node;
-                return temp;
-            } 
-            // if the Node has 2 children
-            Node* temp = findMin(node->right);
-            node->data = temp->data;
-            node->right = deleteRec(node->right, temp->data);
+Node* deleteRec(Node* node, int value) {
+    if (!node) return nullptr;
+
+    if (value < node->data)
+        node->left = deleteRec(node->left, value);
+    else if (value > node->data)
+        node->right = deleteRec(node->right, value);
+    else {
+        if (!node->left || !node->right) {
+            Node* child = node->left ? node->left : node->right;
+            delete node;
+            return child;
         }
-        return node;
-        
+
+        Node* successor = findMin(node->right);
+        node->data = successor->data;
+        node->right = deleteRec(node->right, successor->data);
     }
+
+    return node;
+}
 
     void inorderRec(Node* node) {
         // TODO: Implement recursive inorder traversal
