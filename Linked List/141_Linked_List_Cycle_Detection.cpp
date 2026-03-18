@@ -1,5 +1,4 @@
 // Floyd's Cycle Detection (Tortoise and Haire)
-#include <iostream>
 struct ListNode {
   int val;
   ListNode *next;
