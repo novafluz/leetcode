@@ -1,7 +1,6 @@
 // Time Complexity: O(1)
 // Space Complexity: O(n)
 #include <algorithm>
-#include <iostream>
 #include <stack>
 using namespace std;
 class MinStack {
