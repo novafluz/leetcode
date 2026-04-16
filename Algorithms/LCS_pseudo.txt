@@ -3,7 +3,7 @@ For example: Xi = ACGG, Yj = ACGC -> LCS = 3 (ACG)
 Create table L[0..m, 0...n] initialized to 0 (vector<vector>) 
 m = len(X), n = len(Y)
 1. Fill the table
-for i from 1 to m:
+for i from 1 to m:  
     for j from 1 to n:
         if X[i] == Y[j]:
             L[i][j] = L[i-1][j-1] + 1
