@@ -18,3 +18,5 @@ public:
     return dp[0];
   }
 };
+// Time complexity: O(n.m.k) 
+// n: len(s), m: num of words in wordDict, t: avr len of word in wordDict
