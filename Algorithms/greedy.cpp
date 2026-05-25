@@ -157,7 +157,7 @@ public:
       HuffmanNode *right = pq.top();
       pq.pop();
       HuffmanNode *newNode =
-          new HuffmanNode('&', left->frequency + right->frequency); // parent
+          new HuffmanNode('&', left->frequency + right->frequency); // parent 
       newNode->left = left;
       newNode->right = right;
       pq.push(newNode);
