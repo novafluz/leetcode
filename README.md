@@ -1,5 +1,4 @@
-# My LeetCode Progress
+## My LeetCode Progress
 
-Starting date: 02/2026
-Language: C++
-Goal: Master DSA
+Starting date: 02/2026 \
+Language: C++ 
